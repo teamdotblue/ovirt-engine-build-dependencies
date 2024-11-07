@@ -2,7 +2,7 @@
 
 # Package version is static and should be aligned with engine version that is
 # used to build maven cache
-PKG_VERSION="4.5.5"
+PKG_VERSION="4.5.7"
 
 # Either a branch name or a specific tag in ovirt-engine project for which
 # the maven cache is built
@@ -34,8 +34,8 @@ git config --global --add safe.directory $(pwd)
 git checkout ${ENGINE_VERSION}
 
 # Prepare the release, which contain git hash of engine commit and current date
-#PKG_RELEASE="0.$(date +%04Y%02m%02d%02H%02M).git$(git rev-parse --short HEAD)"
-PKG_RELEASE="1"
+PKG_RELEASE="0.$(date +%04Y%02m%02d%02H%02M).git$(git rev-parse --short HEAD)"
+#PKG_RELEASE="1"
 
 # Set the location of the JDK that will be used for compilation:
 export JAVA_HOME="${JAVA_HOME:=/usr/lib/jvm/java-11}"

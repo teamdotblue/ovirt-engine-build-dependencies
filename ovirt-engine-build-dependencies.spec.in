@@ -41,7 +41,7 @@ mvn \
 
 # Install additional dependencies
 cd %{_builddir}/%{name}-%{version}
-for dep in %(cat ADDITIONAL_DEPENDENCIES); do
+for dep in $(cat ADDITIONAL_DEPENDENCIES); do
     mvn dependency:get -Dartifact=${dep} -Dmaven.repo.local=%{_repository}
 done
 
